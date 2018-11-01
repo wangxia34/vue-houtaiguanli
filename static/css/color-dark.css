@@ -20,9 +20,9 @@
     border: 1px solid #409EFF;
     background-color: #409EFF;
 }
-/*.message-title{*/
-    /*color: #20a0ff;*/
-/*}*/
+.message-title{
+    color: #20a0ff;
+}
 /*.collapse-btn:hover{*/
     /*background: rgb(40,52,70);*/
 /*}*/

@@ -21,7 +21,7 @@
     import vTags from './Tags.vue';
     import bus from './bus';
     export default {
-        name: "home",
+        name: "common",
         data(){
             return {
                 tagsList: [],
