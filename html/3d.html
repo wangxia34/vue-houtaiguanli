@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+		        padding: 0;
+		        margin: 0;        
+		    }
+		    .block{
+		        padding: 100px 0;
+		        perspective: 800px;
+		        perspective-orign: 50% 50%;
+		    }
+		    .dice{
+		        width: 300px;
+		        height: 300px;
+		        margin: 20px auto;
+		        position: relative;
+		        transform-style: preserve-3d;
+		    }
+		    .page{
+			    width: 200px;
+			    height: 200px;
+			    background: #EF5BE2;
+			    position: absolute;
+			    border: 1px solid red;
+			}
+			#page2{
+		        transform: rotateY(-90deg);
+		        transform-origin: right;
+		    }
+		    #page3{
+		        transform: translateZ(-200px);
+		        transform-origin: right;
+		    }
+		    #page4{
+		        transform: rotateY(90deg);
+		        transform-origin: left;
+		    }
+		    #page5{
+		        transform: rotateX(-90deg);
+		        transform-origin: top;
+		    }
+		    #page6{
+		        transform: rotateX(90deg);
+		        transform-origin: bottom;       
+		    }
+		    @-webkit-keyframes random-rotate{
+			    0%{
+			        transform:rotateX(0deg) rotateY(0deg);
+			    }
+			    100%{
+			        transform:rotateX(360deg) rotateY(360deg);
+			    }
+			}
+			@-moz-keyframes random-rotate{
+			    0%{
+			        transform:rotateX(0deg) rotateY(0deg);
+			    }
+			    100%{
+			        transform:rotateX(360deg) rotateY(360deg);
+			    }
+			}
+			@-o-keyframes random-rotate{
+			     0%{
+			        transform:rotateX(0deg) rotateY(0deg);
+			    }
+			    100%{
+			        transform:rotateX(360deg) rotateY(360deg);
+			    }
+			}
+			@keyframes random-rotate{
+			    0%{
+			        transform:rotateX(0deg) rotateY(0deg);
+			    }
+			    100%{
+			        transform:rotateX(360deg) rotateY(360deg);
+			    }
+			}
+			.dice{
+			    width: 300px;
+			    height: 300px;
+			    margin: 20px auto;
+			    position: relative;
+			    transform-style: preserve-3d;
+			    animation: random-rotate 5s linear 0s infinite;
+			    transition: all 1s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="block">
+	        <div class="dice">
+		        <div class="page" id="page1"></div>
+		        <div class="page" id="page2"></div>
+		        <div class="page" id="page3"></div>
+		        <div class="page" id="page4"></div>
+		        <div class="page" id="page5"></div>
+		        <div class="page" id="page6"></div>
+	        </div>
+	    </div>
+	</body>
+</html>

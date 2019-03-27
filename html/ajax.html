@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="myDiv"><h2>这里是 html get  直接输入的信息</h2></div>
+		<button type="button" onclick="loadXMLDocGET()">通过 AJAX GET 改变内容</button>
+	</body>
+</html>
+<script type="text/javascript">
+	
+	
+	function loadXMLDocGET(){
+		var xmlhttp;
+		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		} else {// code for IE6, IE5
+		  	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange = function() {
+		  	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		    	document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+		    }
+		}
+		xmlhttp.open("GET","/html/data/test2.json",true);
+		xmlhttp.send();
+	}
+	
+	function loadXMLDocPOST(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp=new XMLHttpRequest();
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		xmlhttp.onreadystatechange=function()
+		  {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		    document.getElementById("myDiv2").innerHTML=xmlhttp.responseText;
+		    }
+		  }
+		xmlhttp.open("POST","/html/data/test2.json",true);
+		xmlhttp.send();
+
+	}
+	
+	
+	
+</script>
